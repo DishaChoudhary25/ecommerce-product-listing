@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Store | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Website header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Quick Kart</h1>
+            <p>Your everyday shopping destination</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Explore Our Products</h2>
+            <p>Find useful products for your everyday needs.</p>
+        </section>
+
+        <!-- Product search -->
+        <section class="search-section">
+            <form id="search-form">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search products by name or category..."
+                    aria-label="Search products"
+                >
+
+                <button type="submit">Search</button>
+                <button type="button" id="clear-button" class="clear-button">
+                    Clear
+                </button>
+            </form>
+        </section>
+
+        <!-- Product category filters -->
+        <section class="category-filters" aria-label="Filter by category">
+
+            <button type="button" class="category-button active"
+                    data-category="All">
+                All Products
+            </button>
+
+            <button type="button" class="category-button"
+                    data-category="Electronics">
+                Electronics
+            </button>
+
+            <button type="button" class="category-button"
+                    data-category="Accessories">
+                Accessories
+            </button>
+
+            <button type="button" class="category-button"
+                    data-category="Lifestyle">
+                Lifestyle
+            </button>
+
+            <button type="button" class="category-button"
+                    data-category="Home">
+                Home
+            </button>
+
+            <button type="button" class="category-button"
+                    data-category="Stationery">
+                Stationery
+            </button>
+
+        </section>
+
+        <!-- Messages for loading and errors -->
+        <p id="message" role="status">Loading products...</p>
+
+        <!-- Product listing -->
+        <section id="product-list" class="product-grid"
+                 aria-label="Product listing">
+        </section>
+
+        <!-- Individual product details -->
+        <section id="product-details" class="details-section" hidden>
+            <h2>Product Details</h2>
+
+            <div id="details-content"></div>
+
+            <button type="button" id="back-button" class="back-button">
+                Back to Products
+            </button>
+        </section>
+
+    </main>
+
+    <!-- Website footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Quick Kart </p>
+    </footer>
+
+</body>
+</html>

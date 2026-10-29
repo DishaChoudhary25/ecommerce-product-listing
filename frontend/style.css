@@ -1,0 +1,383 @@
+/* ---------- General page styling ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f6f8fc;
+    color: #202b3c;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+    background: linear-gradient(135deg, #173b75, #2766b0);
+    color: white;
+    padding: 28px 0;
+    box-shadow: 0 4px 15px rgba(23, 59, 117, 0.15);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    margin: 0;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    margin: 0;
+    color: #e2edff;
+    font-size: 15px;
+}
+
+/* ---------- Welcome section ---------- */
+
+.welcome {
+    padding: 42px 0 22px;
+}
+
+.welcome h2 {
+    margin: 0 0 8px;
+    color: #173b75;
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.welcome p {
+    margin: 0;
+    color: #667085;
+    font-size: 16px;
+}
+
+/* ---------- Search bar ---------- */
+
+.search-section {
+    margin: 15px 0 20px;
+}
+
+#search-form {
+    display: flex;
+    gap: 12px;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 16px;
+    background: white;
+    border: 1px solid #d8dfeb;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+}
+
+#search-input:focus {
+    border-color: #2766b0;
+    box-shadow: 0 0 0 3px rgba(39, 102, 176, 0.12);
+}
+
+#search-form button,
+.details-button,
+.back-button {
+    padding: 12px 19px;
+    background: #245da5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+#search-form button:hover,
+.details-button:hover,
+.back-button:hover {
+    background: #173b75;
+    transform: translateY(-1px);
+}
+
+#search-form .clear-button {
+    background: #e7edf6;
+    color: #344054;
+}
+
+#search-form .clear-button:hover {
+    background: #d5dfed;
+}
+
+/* ---------- Category filters ---------- */
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0;
+}
+
+.category-button {
+    background: white;
+    color: #344054;
+    border: 1px solid #d8dfeb;
+    border-radius: 22px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.category-button:hover {
+    border-color: #2766b0;
+    color: #174ea6;
+}
+
+.category-button.active {
+    background: #245da5;
+    border-color: #245da5;
+    color: white;
+}
+
+/* ---------- Status message ---------- */
+
+#message {
+    margin: 25px 0;
+    text-align: center;
+    color: #667085;
+}
+
+/* ---------- Product grid ---------- */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    padding: 10px 0 45px;
+    align-items: stretch;
+}
+
+/* ---------- Product cards ---------- */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: white;
+    border: 1px solid #edf0f5;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(31, 50, 81, 0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(31, 50, 81, 0.12);
+}
+
+/* Product image area */
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    background: #eef2f7;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin: 0 0 9px;
+    color: #1f3557;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.product-info p {
+    margin: 8px 0;
+}
+
+.product-info > p:not(.price) {
+    color: #667085;
+    font-size: 14px;
+}
+
+.category {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 5px 11px;
+    background: #eaf1ff;
+    color: #245da5;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.price {
+    margin-top: auto !important;
+    padding-top: 8px;
+    color: #15803d;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.details-button {
+    width: 100%;
+    margin-top: 12px;
+}
+
+/* ---------- Product details section ---------- */
+
+.details-section {
+    margin: 25px 0 45px;
+    padding: 28px;
+    background: white;
+    border: 1px solid #edf0f5;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(31, 50, 81, 0.06);
+}
+
+.details-section > h2 {
+    margin-top: 0;
+    color: #173b75;
+}
+
+.details-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.details-content img {
+    width: 42%;
+    max-width: 420px;
+    height: 330px;
+    object-fit: cover;
+    background: #eef2f7;
+    border-radius: 12px;
+}
+
+.details-text {
+    flex: 1;
+}
+
+.details-text h3 {
+    margin-top: 0;
+    color: #1f3557;
+    font-size: 26px;
+}
+
+.details-text p {
+    color: #667085;
+}
+
+.details-text .price {
+    color: #15803d;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    margin-top: 15px;
+    padding: 22px 15px;
+    background: #173b75;
+    color: #e2edff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ---------- Tablet screens ---------- */
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .header .container {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+/* ---------- Mobile screens ---------- */
+
+@media (max-width: 560px) {
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .welcome {
+        padding-top: 30px;
+    }
+
+    .welcome h2 {
+        font-size: 26px;
+    }
+
+    #search-form {
+        flex-wrap: wrap;
+    }
+
+    #search-input {
+        flex-basis: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+
+    .details-section {
+        padding: 18px;
+    }
+
+    .details-content {
+        flex-direction: column;
+    }
+
+    .details-content img {
+        width: 100%;
+        max-width: none;
+        height: 250px;
+    }
+}
